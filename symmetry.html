@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check chain symmetry</title>
+</head>
+<body>
+<input type="text" id="inputCSS" name=""/>
+<button onclick="isPaLindrome()"></button>
+<p id="result"></p>
+<script>
+    function isPaLindrome() {
+        let n = document.getElementById("inputCSS").value;
+        let M = n;
+        let i;
+        let dx = 0;
+        console.log('dx; ' , dx)
+        while (M>0){
+            i = M % 10;
+            dx = 10 * dx +i;
+            M = Math.floor(M/10)
+        }
+        if  (dx==n){
+            alert(n+'là số đối xứng');
+        }
+        else {
+            alert(n+' không là số đối xứng');
+        }
+    }
+
+</script>
+</body>
+</html>
